@@ -1,4 +1,4 @@
-import { Task } from "../lib/placeholderData"
+import { Task } from "../lib/mockData"
 
 type GoalListItemProps = {
     task: Task

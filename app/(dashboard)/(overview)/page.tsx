@@ -1,4 +1,4 @@
-import { placeholderDailyData, placeholderMonthlyData, placeholderWeeklyData } from "@/app/lib/placeholderData";
+import { placeholderDailyData, placeholderMonthlyData, placeholderWeeklyData } from "@/app/lib/mockData";
 
 import { GoalList } from "@/app/ui/goalList";
 
