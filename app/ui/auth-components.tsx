@@ -1,9 +1,9 @@
 import { signIn, signOut } from "../../auth"
 
 export function SignIn({
-  provider = null,
+  provider,
   ...props
-}: { provider: string | null }) {
+}: { provider?: string }) {
   return (
     <form
       action={async () => {
