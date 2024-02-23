@@ -1,12 +1,12 @@
 import dotenv from 'dotenv'
 import NextAuth, { NextAuthConfig } from "next-auth"
 import Discord from "next-auth/providers/discord"
-import PostgresAdapter from "@auth/pg-adapter"
-import { createPool } from '@vercel/postgres'
+import { PrismaAdapter } from "@auth/prisma-adapter"
+import { PrismaClient } from "@prisma/client"
 
 dotenv.config()
 
-const pool = createPool()
+const prisma = new PrismaClient()
 
 export const {
     handlers: { GET, POST },
@@ -18,7 +18,7 @@ export const {
         clientId: process.env.DISCORD_CLIENT_ID ?? "",
         clientSecret: process.env.DISCORD_CLIENT_SECRET ?? ""
     })],
-    adapter: PostgresAdapter(pool),
+    adapter: PrismaAdapter(prisma),
     secret: process.env.NEXTAUTH_SECRET ?? "",
     session: {
         strategy: "jwt",

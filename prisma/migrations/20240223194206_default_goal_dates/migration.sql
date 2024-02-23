@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Goal" ALTER COLUMN "startDate" SET DEFAULT (CURRENT_DATE),
+ALTER COLUMN "endDate" SET DEFAULT (CURRENT_DATE + '1 year'::interval);
