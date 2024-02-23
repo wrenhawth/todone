@@ -1,14 +1,14 @@
-import { signIn, signOut } from "@/auth"
+import { signIn, signOut } from "../../auth"
 
 export function SignIn({
-  provider,
+  provider = null,
   ...props
-}: { provider?: string }) {
+}: { provider: string | null }) {
   return (
     <form
       action={async () => {
         "use server"
-        await signIn(provider)
+        await signIn(provider ?? undefined)
       }}
     >
       <button {...props}>Sign In</button>
