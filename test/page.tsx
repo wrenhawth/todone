@@ -3,7 +3,7 @@
 // import { SignIn } from "./ui/auth-components"
 
 
-export default async function Page() {
+export default function Page() {
   // const session = await auth()
   // if (session?.user == null) {
   //   return <SignIn/>
