@@ -1,10 +1,10 @@
-import { Task } from "../lib/mockData"
+import { Task } from "../../lib/mockData"
 
-type GoalListItemProps = {
+type TaskListItemProps = {
     task: Task
 }
 
-export function GoalListItem(props: GoalListItemProps) {
+export function TaskListItem(props: TaskListItemProps) {
     const { task } = props
     return (
         <li className="text-xl">
